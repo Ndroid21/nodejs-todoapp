@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <ul>
+      <% for(let todo of todos) { %>
+      <li>
+        <p><%= todo.description %></p>
+        <a href="/delete?id=<%= todo._id %> ">delete</a>
+      </li>
+      <% } %>
+    </ul>
+    <form method="post" action="/">
+      <input type="text" name="description" autofocus />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
