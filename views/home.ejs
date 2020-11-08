@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <title>Todo App</title>
   </head>
   <body>
@@ -14,9 +15,37 @@
       </li>
       <% } %>
     </ul>
-    <form method="post" action="/">
-      <input type="text" name="description" autofocus />
-      <button type="submit">Submit</button>
-    </form>
+    <div class="fixed-bar w-100">
+      <form method="post" action="/">
+        <div style="display: flex">
+          <div class="input-inline">
+            <label for="description">Description</label>
+            <input
+              type="text"
+              name="description"
+              id="description"
+              placeholder="What do you need to do?"
+              autofocus
+            />
+          </div>
+          <div class="input-inline">
+            <label for="category">Category</label>
+            <select name="category" id="category">
+              <option>Personal</option>
+              <option>Work</option>
+              <option>School</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="input-inline">
+            <label for="dueDate">Due Date</label>
+            <input type="date" name="dueDate" id="dueDate" />
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
